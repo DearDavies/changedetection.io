@@ -51,11 +51,12 @@ def test_describe_telegram():
 
 def test_describe_alternative_credentials():
     """Apprise marks a token required when the URL forms that use it need it. Slack has two ways in
-    (bot token, or the three webhook tokens): neither is required on its own, one of them is."""
+    (bot token, or the three webhook tokens), and a third whose token isn't marked required at all
+    (the workflow path): none is required on its own, one of them is."""
     form = describe_service('slack')
     fields = {f['key']: f for f in form['fields']}
-    assert not any(fields[k]['required'] for k in ('access_token', 'token_a', 'token_b', 'token_c'))
-    assert form['one_of'] == [['access_token'], ['token_a', 'token_b', 'token_c']]
+    assert not any(fields[k]['required'] for k in ('access_token', 'token_a', 'token_b', 'token_c', 'workflow_path'))
+    assert form['one_of'] == [['access_token'], ['workflow_path'], ['token_a', 'token_b', 'token_c']]
     # The credentials come before the optional fields
     assert [f['key'] for f in form['fields'][:4]] == ['access_token', 'token_a', 'token_b', 'token_c']
 
@@ -86,8 +87,11 @@ def test_build_slack_either_way():
     for values in ({}, {'token_a': 'T0123ABCD'}, {'targets': '#website-changes'}):
         result = build_url('slack', values)
         assert 'url' not in result
-        assert result['one_of'] == [['OAuth Access Token'], ['Token A', 'Token B', 'Token C']]
-        assert result['error'] == 'Required: OAuth Access Token / Token A + Token B + Token C'
+        assert result['one_of'] == [['OAuth Access Token'], ['Workflow Path'], ['Token A', 'Token B', 'Token C']]
+        assert result['error'] == 'Required: OAuth Access Token / Workflow Path / Token A + Token B + Token C'
+
+    workflow = build_url('slack', {'workflow_path': 'T0123ABCD/B0456EFGH/abcd/efgh'})
+    assert workflow['url'] == 'slack://T0123ABCD/B0456EFGH/abcd/efgh/?mode=workflow'
 
 
 def test_describe_secure_toggle_and_headers():

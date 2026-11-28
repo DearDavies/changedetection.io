@@ -166,8 +166,10 @@ def _required_sets(details):
     member_of = {member: key for key, spec in tokens.items() for member in spec.get('group') or ()}
     needs = []
     for template in templates:
-        used = {member_of.get(token, token) for token in _TEMPLATE_TOKEN.findall(template)}
-        needs.append(frozenset(used & required))
+        used = {member_of.get(token, token) for token in _TEMPLATE_TOKEN.findall(template)} - {'schema'}
+        # A URL form built only from tokens that aren't marked required (Slack's workflow path) still
+        # needs them, they are all that tells it apart from the other forms
+        needs.append(frozenset(used & required or used))
     # Only the smallest combinations count: {a} makes {a, b} pointless as an alternative
     minimal = [n for n in set(needs) if not any(other < n for other in needs)]
     always = set(frozenset.intersection(*minimal)) if minimal else set()
