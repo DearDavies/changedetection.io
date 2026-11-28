@@ -1616,6 +1616,14 @@ msgid "Set to empty to disable / no limit"
 msgstr ""
 
 #: changedetectionio/blueprint/settings/templates/settings.html
+msgid "Remove password?"
+msgstr "移除密码？"
+
+#: changedetectionio/blueprint/settings/templates/settings.html
+msgid "Anyone who can reach this page will be able to see and change everything, without signing in."
+msgstr "任何能访问此页面的人都无需登录即可查看和更改所有内容。"
+
+#: changedetectionio/blueprint/settings/templates/settings.html
 msgid "Password protection for your changedetection.io application."
 msgstr "为你的 changedetection.io 应用启用密码保护。"
 
@@ -4292,7 +4300,7 @@ msgstr "RSS <description> 内容来源"
 msgid "RSS \"System default\" template override"
 msgstr "RSS “系统默认”模板覆盖"
 
-#: changedetectionio/forms.py
+#: changedetectionio/blueprint/settings/templates/settings.html changedetectionio/forms.py
 msgid "Remove password"
 msgstr "移除密码"
 

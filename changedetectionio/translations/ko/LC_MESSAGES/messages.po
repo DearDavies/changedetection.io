@@ -1627,6 +1627,14 @@ msgid "Set to empty to disable / no limit"
 msgstr "공란이면 비활성화됩니다. (제한 없음)"
 
 #: changedetectionio/blueprint/settings/templates/settings.html
+msgid "Remove password?"
+msgstr "비밀번호를 제거할까요?"
+
+#: changedetectionio/blueprint/settings/templates/settings.html
+msgid "Anyone who can reach this page will be able to see and change everything, without signing in."
+msgstr "이 페이지에 접속할 수 있는 누구나 로그인 없이 모든 것을 보고 변경할 수 있게 됩니다."
+
+#: changedetectionio/blueprint/settings/templates/settings.html
 msgid "Password protection for your changedetection.io application."
 msgstr "changedetection.io 애플리케이션에 비밀번호를 적용합니다."
 
@@ -4304,7 +4312,7 @@ msgstr "RSS <description> 본문 생성 기준"
 msgid "RSS \"System default\" template override"
 msgstr "RSS \"System default\" 템플릿 재정의"
 
-#: changedetectionio/forms.py
+#: changedetectionio/blueprint/settings/templates/settings.html changedetectionio/forms.py
 msgid "Remove password"
 msgstr "비밀번호 제거"
 

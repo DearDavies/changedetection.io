@@ -229,7 +229,7 @@ $(document).ready(function() {
  *    data-confirm-button="Delete">
  */
 $(document).ready(function() {
-  $(document).on('click', 'a[data-requires-confirm], button[data-requires-confirm]', function(e) {
+  $(document).on('click', 'a[data-requires-confirm], button[data-requires-confirm], input[type="submit"][data-requires-confirm]', function(e) {
     e.preventDefault();
     const $element = $(this);
     const url = $element.attr('href');
@@ -258,9 +258,10 @@ $(document).ready(function() {
           window.location.href = url;
         }
         // If it's a button in a form, submit the form
-        else if ($element.is('button')) {
-          // Use requestSubmit() to include the button's name/value in the form data
-          $element.closest('form')[0].requestSubmit($element[0]);
+        else if ($element.is('button, input')) {
+          // Use requestSubmit() to include the button's name/value in the form data.
+          // .form and not the form around it: a button can belong to another one (form="...")
+          $element[0].form.requestSubmit($element[0]);
         }
       }
     };

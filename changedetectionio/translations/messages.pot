@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: changedetection.io 0.70.4\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-11-26 03:20+0100\n"
+"POT-Creation-Date: 2026-11-28 15:32+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1607,6 +1607,14 @@ msgstr ""
 
 #: changedetectionio/blueprint/settings/templates/settings.html
 msgid "Set to empty to disable / no limit"
+msgstr ""
+
+#: changedetectionio/blueprint/settings/templates/settings.html
+msgid "Remove password?"
+msgstr ""
+
+#: changedetectionio/blueprint/settings/templates/settings.html
+msgid "Anyone who can reach this page will be able to see and change everything, without signing in."
 msgstr ""
 
 #: changedetectionio/blueprint/settings/templates/settings.html
@@ -4293,7 +4301,7 @@ msgstr ""
 msgid "RSS \"System default\" template override"
 msgstr ""
 
-#: changedetectionio/forms.py
+#: changedetectionio/blueprint/settings/templates/settings.html changedetectionio/forms.py
 msgid "Remove password"
 msgstr ""
 

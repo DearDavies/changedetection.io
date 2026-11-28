@@ -1687,6 +1687,14 @@ msgid "Set to empty to disable / no limit"
 msgstr "Establecer en vacío para deshabilitar/sin límite"
 
 #: changedetectionio/blueprint/settings/templates/settings.html
+msgid "Remove password?"
+msgstr "¿Quitar la contraseña?"
+
+#: changedetectionio/blueprint/settings/templates/settings.html
+msgid "Anyone who can reach this page will be able to see and change everything, without signing in."
+msgstr "Cualquiera que pueda acceder a esta página podrá ver y cambiar todo, sin iniciar sesión."
+
+#: changedetectionio/blueprint/settings/templates/settings.html
 msgid "Password protection for your changedetection.io application."
 msgstr "Protección con contraseña para su aplicación changetection.io."
 
@@ -4439,7 +4447,7 @@ msgstr "RSS<description>cuerpo construido a partir de"
 msgid "RSS \"System default\" template override"
 msgstr "Anulación de plantilla RSS \"Predeterminada del sistema\""
 
-#: changedetectionio/forms.py
+#: changedetectionio/blueprint/settings/templates/settings.html changedetectionio/forms.py
 msgid "Remove password"
 msgstr "Quitar contraseña"
 

@@ -52,7 +52,14 @@
                     <div class="pure-control-group">
                         {% if not hide_remove_pass %}
                             {% if current_user.is_authenticated %}
-                                {{ render_button(form.application.form.removepassword_button) }}
+                                {#- Sent by its own form (below): as the first submit button of this form it
+                                    was what Enter in any field pressed, removing the password instead of saving #}
+                                {{ form.application.form.removepassword_button(form="remove-password-form", **{
+                                    'data-requires-confirm': '',
+                                    'data-confirm-type': 'danger',
+                                    'data-confirm-title': _('Remove password?'),
+                                    'data-confirm-message': '<p>' ~ _('Anyone who can reach this page will be able to see and change everything, without signing in.') ~ '</p>',
+                                    'data-confirm-button': _('Remove password')}) }}
                             {% else %}
                             {{ render_field(form.application.form.password) }}
                             <span class="pure-form-message-inline">{{ _('Password protection for your changedetection.io application.') }}</span>
@@ -457,6 +464,9 @@ nav
                     {{ render_button(form.save_button) }}
                 </div>
             </div>
+        </form>
+        <form id="remove-password-form" action="{{url_for('settings.settings_page')}}" method="POST">
+            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" >
         </form>
     </div>
 </div>

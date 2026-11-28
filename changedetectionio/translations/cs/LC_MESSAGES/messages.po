@@ -1655,6 +1655,14 @@ msgid "Set to empty to disable / no limit"
 msgstr "Nastavit prázdnou hodnotu pro vypnutí / bez limitu"
 
 #: changedetectionio/blueprint/settings/templates/settings.html
+msgid "Remove password?"
+msgstr "Odebrat heslo?"
+
+#: changedetectionio/blueprint/settings/templates/settings.html
+msgid "Anyone who can reach this page will be able to see and change everything, without signing in."
+msgstr "Kdokoli s přístupem k této stránce uvidí a změní vše, bez přihlášení."
+
+#: changedetectionio/blueprint/settings/templates/settings.html
 msgid "Password protection for your changedetection.io application."
 msgstr "Chránit heslem tuto changedetection.io applikaci"
 
@@ -4354,7 +4362,7 @@ msgstr "RSS <description> tělo sestavené z"
 msgid "RSS \"System default\" template override"
 msgstr "Úprava \"Systémové výchozí\" RSS šablony"
 
-#: changedetectionio/forms.py
+#: changedetectionio/blueprint/settings/templates/settings.html changedetectionio/forms.py
 msgid "Remove password"
 msgstr "Odebrat heslo"
 

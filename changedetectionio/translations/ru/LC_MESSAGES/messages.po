@@ -1716,6 +1716,14 @@ msgid "Set to empty to disable / no limit"
 msgstr "Установите пустое значение, чтобы отключить/без ограничений"
 
 #: changedetectionio/blueprint/settings/templates/settings.html
+msgid "Remove password?"
+msgstr "Удалить пароль?"
+
+#: changedetectionio/blueprint/settings/templates/settings.html
+msgid "Anyone who can reach this page will be able to see and change everything, without signing in."
+msgstr "Любой, у кого есть доступ к этой странице, сможет всё видеть и изменять без входа."
+
+#: changedetectionio/blueprint/settings/templates/settings.html
 msgid "Password protection for your changedetection.io application."
 msgstr "Защита паролем для вашего приложения Changetection.io."
 
@@ -4466,7 +4474,7 @@ msgstr "Корпус RSS <description> построен из"
 msgid "RSS \"System default\" template override"
 msgstr "Переопределение шаблона RSS «Системное значение по умолчанию»"
 
-#: changedetectionio/forms.py
+#: changedetectionio/blueprint/settings/templates/settings.html changedetectionio/forms.py
 msgid "Remove password"
 msgstr "Удалить пароль"
 

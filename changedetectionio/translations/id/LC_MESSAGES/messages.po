@@ -1722,6 +1722,14 @@ msgid "Set to empty to disable / no limit"
 msgstr "Kosongkan untuk menonaktifkan / tanpa batas"
 
 #: changedetectionio/blueprint/settings/templates/settings.html
+msgid "Remove password?"
+msgstr "Hapus kata sandi?"
+
+#: changedetectionio/blueprint/settings/templates/settings.html
+msgid "Anyone who can reach this page will be able to see and change everything, without signing in."
+msgstr "Siapa pun yang dapat membuka halaman ini bisa melihat dan mengubah semuanya, tanpa masuk."
+
+#: changedetectionio/blueprint/settings/templates/settings.html
 msgid "Password protection for your changedetection.io application."
 msgstr "Perlindungan kata sandi untuk aplikasi changedetection.io Anda."
 
@@ -4451,7 +4459,7 @@ msgstr "Isi <description> RSS dibuat dari"
 msgid "RSS \"System default\" template override"
 msgstr "Penimpaan template \"Default sistem\" RSS"
 
-#: changedetectionio/forms.py
+#: changedetectionio/blueprint/settings/templates/settings.html changedetectionio/forms.py
 msgid "Remove password"
 msgstr "Hapus kata sandi"
 

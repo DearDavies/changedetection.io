@@ -1672,6 +1672,14 @@ msgid "Set to empty to disable / no limit"
 msgstr "Devre dışı bırakmak / sınır koymamak için boş bırakın"
 
 #: changedetectionio/blueprint/settings/templates/settings.html
+msgid "Remove password?"
+msgstr "Parola kaldırılsın mı?"
+
+#: changedetectionio/blueprint/settings/templates/settings.html
+msgid "Anyone who can reach this page will be able to see and change everything, without signing in."
+msgstr "Bu sayfaya ulaşabilen herkes, oturum açmadan her şeyi görebilir ve değiştirebilir."
+
+#: changedetectionio/blueprint/settings/templates/settings.html
 msgid "Password protection for your changedetection.io application."
 msgstr "changedetection.io uygulamanız için parola koruması."
 
@@ -4393,7 +4401,7 @@ msgstr "Şuradan oluşturulan RSS <description> gövdesi"
 msgid "RSS \"System default\" template override"
 msgstr "RSS \"Sistem varsayılanı\" şablonunu geçersiz kılma"
 
-#: changedetectionio/forms.py
+#: changedetectionio/blueprint/settings/templates/settings.html changedetectionio/forms.py
 msgid "Remove password"
 msgstr "Parolayı kaldır"
 
